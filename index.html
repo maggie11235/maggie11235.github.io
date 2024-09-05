@@ -69,14 +69,29 @@ $(function(){
     <!-- Curriculum Vitae button -->
     <a class="btn btn-default btn-xs" href="cv (Margherita Harris).pdf" style="display:inline-block; margin-right: 10px;">Curriculum Vitae</a>
     
-    <!-- Contact Me button -->
-    <a class="btn btn-default btn-xs" href="#" onclick="document.getElementById('email').style.display='inline'; return false;" title="Email" style="display:inline-block;">Contact me here!</a>
+    <!-- Contact Me button with toggle functionality -->
+    <a class="btn btn-default btn-xs" href="#" onclick="toggleEmail();" title="Email" style="display:inline-block;">Contact me here!</a>
 </p>
 
 <p style="text-align:right;">
     <!-- Hidden email address -->
     <span id="email" style="display:none; font-weight: bold; color: pink; background-color: rgb(49, 77, 44); padding: 10px; border-radius: 5px;">margherita.harris@philos.uni-hannover.de</span>
 </p>
+
+<script>
+    function toggleEmail() {
+        var emailElement = document.getElementById("email");
+        if (emailElement.style.display === "none" || emailElement.style.display === "") {
+            emailElement.style.display = "inline";
+        } else {
+            emailElement.style.display = "none";
+        }
+    }
+</script>
+
+
+		
+
 </td></tr>
 
 
